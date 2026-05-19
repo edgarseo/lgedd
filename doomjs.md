@@ -196,95 +196,38 @@ window.onload = function() {
 ```html
 
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Modificación por ID Únicos</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificación por ID</title>
 </head>
-
 <body>
 
-  
+    <!-- Mínimo 4 elementos diferentes con un ID único cada uno -->
+    <article id="item1">Este es un artículo destacado por ID.</article>
+    <section id="item2">Esta es una sección destacada por ID.</section>
+    <p id="item3">Este es un párrafo destacado por ID.</p>
+    <span id="item4">Este es un texto span destacado por ID.</span>
 
-    <!-- Elementos con IDs únicos -->
+    <!-- Elemento normal de control -->
+    <p>Este es un párrafo normal sin ID.</p>
 
-    <article id="item1">Este es un artículo destacado.</article>
-
-    <section id="item2">Esta es una sección destacada.</section>
-
-    <p id="item3">Este es un párrafo destacado.</p>
-
-    <span id="item4">Este es un texto span destacado.</span>
-
-  
-
-    <p>Este es un párrafo normal.</p>
-
-  
-
-    <!-- Vinculación limpia -->
-
-    <script src="script.js"></script>
-
-  
+    <!-- El script se carga al final para que los IDs ya existan en la pantalla -->
+    <script src="script.js"></script>
 
 </body>
-
 </html>
+
 ```
 
 
 ```js
-<!DOCTYPE html>
-
-<html lang="es">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Modificación por ID Únicos</title>
-
-</head>
-
-<body>
-
-  
-
-    <!-- Elementos con IDs únicos -->
-
-    <article id="item1">Este es un artículo destacado.</article>
-
-    <section id="item2">Esta es una sección destacada.</section>
-
-    <p id="item3">Este es un párrafo destacado.</p>
-
-    <span id="item4">Este es un texto span destacado.</span>
-
-  
-
-    <p>Este es un párrafo normal.</p>
-
-  
-
-    <!-- Vinculación limpia -->
-
-    <script src="script.js"></script>
-
-  
-
-</body>
-
-</html>
+// Bucle clásico con var que cuenta del 1 al 4
+for (var i = 1; i <= 4; i++) {
+    // Busca "item1", "item2", "item3" e "item4" secuencialmente y les cambia el color
+    document.getElementById("item" + i).style.cssText = "color: red; background-color: yellow;";
+}
 ```
 
 
