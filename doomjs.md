@@ -25,20 +25,14 @@
 
 
 ```js
-document.addEventListener("DOMContentLoaded", () => {
-    // 1. Obtener la referencia de la lista vacía
-    const lista = document.getElementById("miLista");
-    
-    // 2. Colección de datos a renderizar
-    const textos = ["Elemento 1", "Elemento 2", "Elemento 3"];
+// Buscamos la lista por su ID
+var lista = document.getElementById("miLista");
 
-    // 3. Crear elementos en memoria y añadirlos al DOM
-    textos.forEach(texto => {
-        const nuevoItem = document.createElement("li");
-        nuevoItem.textContent = texto;
-        lista.appendChild(nuevoItem);
-    });
-});
+// Bucle para crear e inyectar los 3 elementos de golpe
+for (var i = 1; i <= 3; i++) {
+    lista.innerHTML += "<li>Elemento " + i + "</li>";
+}
+
 ```
 
 
