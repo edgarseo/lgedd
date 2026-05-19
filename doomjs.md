@@ -45,17 +45,17 @@ for (var i = 1; i <= 3; i++) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualización Masiva de Párrafos</title>
+    <title>Actualización de Párrafos</title>
 </head>
 <body>
 
-    <!-- Los tres párrafos iniciales (en este caso con texto genérico) -->
-    <p>Texto original 1</p>
-    <p>Texto original 2</p>
-    <p>Texto original 3</p>
+    <!-- Los tres párrafos requeridos (pueden tener texto inicial o estar vacíos) -->
+    <p>Texto viejo 1</p>
+    <p>Texto viejo 2</p>
+    <p>Texto viejo 3</p>
 
-    <!-- Vinculación del script externo -->
-    <script src="script.js" defer></script>
+    <!-- El script se enlaza abajo para que los párrafos ya existan en la pantalla -->
+    <script src="script.js"></script>
 
 </body>
 </html>
@@ -64,15 +64,13 @@ for (var i = 1; i <= 3; i++) {
 
 
 ```js
-document.addEventListener("DOMContentLoaded", () => {
-    // 1. Seleccionar todos los elementos <p> del documento
-    const parrafos = document.querySelectorAll("p");
+// 1. Buscamos todas las etiquetas <p> de la página
+var parrafos = document.querySelectorAll("p");
 
-    // 2. Iterar sobre la colección obtenida y actualizar su contenido
-    parrafos.forEach(parrafo => {
-        parrafo.textContent = "Texto actualizado automáticamente";
-    });
-});
+// 2. Recorremos la colección y cambiamos el texto de cada uno
+for (var i = 0; i < parrafos.length; i++) {
+    parrafos[i].textContent = "Texto actualizado automáticamente";
+}
 ```
 
 
